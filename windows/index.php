@@ -14,19 +14,19 @@
             </div>
             <div id="container">
                 <div id="content">
-                    <?php listRoms(); ?>
+                    <?php //listRoms(); ?>
                 </div>
                 <div id="sidebar">
                     <div id="serverStatus">
                         <h3>Server Status</h3>
                         <ul>
-                            <li>HyperSpin: <?php checkHyperSpin(); ?></li>
+                            <li>HyperSpin: <?php //checkHyperSpin(); ?></li>
                         </ul>
                     </div>
                     <div id="emulators">
                         <h3>Emulators</h3>
                         <ul>
-                            <?php listOfEmulators(); ?>
+                            <?php //listOfEmulators(); ?>
                         </ul>
                     </div>
                 </div>
