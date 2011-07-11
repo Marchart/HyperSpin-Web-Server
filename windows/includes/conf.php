@@ -3,10 +3,10 @@
     
     $owner = "John's Arcade";
     
-    $hyperSpinDir = "/Users/jcostanzo3/HyperSpin/";
-    $emulatorDir = $hyperSpinDir . "Emulators";
-    $mameRomDir = $hyperSpinDir . "Emulators/MAME/roms";
-    $romDir = $hyperSpinDir . "Emulators/RomFiles";
+    $hyperSpinDir = "C:\HyperSpin";
+    $emulatorDir = $hyperSpinDir . "/Emulators";
+    $mameRomDir = $hyperSpinDir . "/Emulators/MAME/roms";
+    $romDir = $hyperSpinDir . "/Emulators/RomFiles";
     
     $rejected_files = array(".", "..", ".DS_Store", "RomFiles");
 ?>
