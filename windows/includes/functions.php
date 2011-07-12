@@ -28,6 +28,26 @@
             echo "<li class=\"gameList\">" .$value. "</li>\n";
         }
     }
+	
+	function listOfEmulatorsURL() {
+        require('conf.php');
+        $emulatorList = array();
+        
+        if (is_dir($emulatorDir)) {
+            if ($dh = opendir($emulatorDir)) {
+                while (($file = readdir($dh)) !== false) {
+                    if (!in_array($file, $rejected_files)) {
+                        array_push($emulatorList, $file);
+                    }
+                }
+                closedir($dh);
+            }
+        }
+        
+        foreach ($emulatorList as $value) {
+            echo "<li><a href=\">" .$value. "\" /a>" .$value. "</a></li>\n";
+        }
+    }
     
     function listOfEmulatorsPlain() {
         require('conf.php');
