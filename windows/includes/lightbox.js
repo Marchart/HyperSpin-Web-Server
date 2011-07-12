@@ -5,10 +5,24 @@ $(document).ready(function() {
 		$('.backdrop, .box').css('display', 'block');
 	});*/
 	
-	$('#MAME').click(function() {
+	$('.romList').click(function() {
 
+		var gameClicked = this.id;
 		
-		jQuery('<div>', {
+		$.ajax({
+		type:"GET",
+		url:'includes/functions.php',
+		error:
+			function(){
+				//do something depressing
+			},
+		success:
+			function(){
+				displayArt(gameClicked);
+			}
+});
+		
+		/*jQuery('<div>', {
 			id: 'mame',
 		}).appendTo('body');
 		
@@ -26,7 +40,7 @@ $(document).ready(function() {
 					$('.box1').animate({'opacity':'1.00'}, 300, 'linear');
 					//$('.backdrop, .box1').css('display', 'block');
 		
-		/*$('.close').click(function(){
+		$('.close').click(function(){
 			close_box();
 		});
  
@@ -35,12 +49,12 @@ $(document).ready(function() {
 		});*/
 	});
 	
-	function close_box() {
+	/*function close_box() {
 		/*$('.backdrop, .box').animate({'opacity':'0'}, 300, 'linear', function() {
 			$('.backdrop, .box').css('display', 'none');
-		});*/
+		});
 		alert(something);
 		
 		$(something).remove();
-	}
+	}*/
 });

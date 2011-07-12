@@ -82,7 +82,9 @@
         
         foreach ($emulatorArray as $value) {
             
-            echo "<div class=\"emu\"><h3><a name=\"" .$value. "\">" .$value. "</h3>";
+            echo "<div class=\"emu\"><h3>" .$value. "</h3>";
+			
+			echo "<ul>";
             
             if($value == "MAME") {
                 $romList = array();
@@ -101,11 +103,9 @@
                     }
                 }
 
-                echo "<ul>";
                 foreach ($romList as $valueList) {
-                    echo "<li class=\"romList\">" .$valueList. "</li>\n";
+                    echo "<li class=\"romList\" id=\"$valueList\">" .$valueList. "</li>\n";
                 }
-                echo "</ul>";
 				echo "<a href=\"#top\">Back to top</a>";
             } else {
                 $romList = array();
@@ -123,15 +123,19 @@
                     }
                 }
 
-                echo "<ul>";
                 foreach ($romList as $valueList) {
-                    echo "<li class=\"romList\">" .$valueList. "</li>\n";
+                    echo "<li class=\"romList\" id=\"$valueList\">" .$valueList. "</li>\n";
                 }
-                echo "</ul>";
+				
 				echo "<a href=\"#top\">Back to top</a>";
             }
 			
+			echo "</ul>";
 			echo "</div>";
         }
     }
+	
+	function displayArt() {
+		echo "Hello, World";
+	}
 ?>
