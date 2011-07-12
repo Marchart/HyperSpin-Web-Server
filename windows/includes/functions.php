@@ -45,7 +45,7 @@
         }
         
         foreach ($emulatorList as $value) {
-            echo "<li><a href=\">" .$value. "\" /a>" .$value. "</a></li>\n";
+            echo "<li><a class=\"lightbox\" id=\"" .$value. "\" href=\"#" .$value. "\" />" .$value. "</a></li>\n";
         }
     }
     
@@ -73,10 +73,16 @@
         require('conf.php');
         
         $emulatorArray = listOfEmulatorsPlain();
+		
+		echo "<div id=\"jumpNav\">";
+			foreach ($emulatorArray as $title) {
+				echo "<a href=\"#" .$title. "\">" .$title. "</a> | ";
+			}
+		echo "</div>";
         
         foreach ($emulatorArray as $value) {
             
-            echo "<h3>" .$value. "</h3>";
+            echo "<div class=\"emu\"><h3><a name=\"" .$value. "\">" .$value. "</h3>";
             
             if($value == "MAME") {
                 $romList = array();
@@ -100,6 +106,7 @@
                     echo "<li class=\"romList\">" .$valueList. "</li>\n";
                 }
                 echo "</ul>";
+				echo "<a href=\"#top\">Back to top</a>";
             } else {
                 $romList = array();
                 $romPath = $romDir . "/" . $value;
@@ -121,7 +128,10 @@
                     echo "<li class=\"romList\">" .$valueList. "</li>\n";
                 }
                 echo "</ul>";
+				echo "<a href=\"#top\">Back to top</a>";
             }
+			
+			echo "</div>";
         }
     }
 ?>

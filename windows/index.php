@@ -10,30 +10,14 @@
         <?php include('includes/functions.php'); ?>
     </head>
     <body>
+		<a name="top">
         <div id="outer">
-            <div id="header">
+			<div id="header">
                 <h1 id="siteTitle"><?php echo $owner; ?></h1>
             </div>
             <div id="container">
                 <div id="content">
-                    <?php //listRoms(); ?>
-					<?php //listOfEmulatorsURL(); ?>
-					
-					<h1>This is my webpage...</h1>
-					<a href="#" class="lightbox">Open Lightbox</a>
- 
-					<div class="backdrop"></div>
-					<div class="box">
-						<div class="close">
-							x
-						</div>
-						<div id="lightContent">
-							Hello World!
-						</div>
-					</div>
-					<hr /><br />
-					<a href="#content12" rel="nofollow">Open Lightbox Content</a>
-					<div id="content12">This will be the content inside of the lightbox</div>
+					<?php listRoms(); ?>
                 </div>
                 <div id="sidebar">
                     <div id="serverStatus">
