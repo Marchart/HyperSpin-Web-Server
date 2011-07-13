@@ -1,3 +1,3 @@
 <?php
-	echo $_GET['id'];
+	$romFile = $_GET['id'];
 ?>

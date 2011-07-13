@@ -4,6 +4,7 @@
     $owner = "John's Arcade";
     
     $hyperSpinDir = "/Users/jcostanzo3/HyperSpin/";
+	$hyperSpinMedia = "/Users/jcostanzo3/HyperSpin/Media";
     $emulatorDir = $hyperSpinDir . "Emulators";
     $mameRomDir = $hyperSpinDir . "Emulators/MAME/roms";
     $romDir = $hyperSpinDir . "Emulators/RomFiles";

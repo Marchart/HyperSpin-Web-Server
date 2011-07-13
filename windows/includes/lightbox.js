@@ -19,6 +19,7 @@ $(document).ready(function() {
 		success:
 			function(data){
 				$.get("includes/test.php?id="+gameClicked, function(data){
+					$("div").append(data);
 					alert(data)
 				});
 			}

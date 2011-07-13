@@ -134,8 +134,4 @@
 			echo "</div>";
         }
     }
-	
-	function displayArt() {
-		echo "Hello, World";
-	}
 ?>
