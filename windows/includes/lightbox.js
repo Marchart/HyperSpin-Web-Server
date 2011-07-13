@@ -12,14 +12,15 @@ $(document).ready(function() {
 		$.ajax({
 		type:"GET",
 		url:'includes/functions.php',
-		data:"phpvariable=gameClicked&xyz=zzz",
 		error:
 			function(){
 				//do something depressing
 			},
 		success:
-			function(){
-				displayArt(gameClicked);
+			function(data){
+				$.get("includes/test.php?id="+gameClicked, function(data){
+					alert(data)
+				});
 			}
 		});
     });
