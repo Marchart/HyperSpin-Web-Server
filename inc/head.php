@@ -3,5 +3,5 @@
     <title>HyperSpin Cabinet</title>
     <link rel="stylesheet" href="styles/master.css" type="text/css" media="screen" charset="utf-8">
     <?php include('config.inc'); ?>
-    <?php //include('inc/functions.php'); ?>
+    <?php include('inc/functions.php'); ?>
 </head>
